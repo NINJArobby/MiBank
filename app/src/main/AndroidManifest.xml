@@ -131,20 +131,34 @@
         <activity
             android:name=".TouchTransfer.Activities.TouchTransHome"
             >
-
+            <!-- <intent-filter>
+                 <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
+                 <category android:name="android.intent.category.DEFAULT"/>
+                 <data android:mimeType="text/plain"/>
+             </intent-filter>-->
         </activity>
         <activity
             android:name=".TouchTransfer.Activities.TouchTransReceive">
-            <intent-filter>
-                <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <data android:mimeType="application/vnd.zenithbank.com.gh.mibank"/>
-            </intent-filter>
+
         </activity>
         <activity
             android:name=".Bill_Payment.Activities.BillPayHome"
             android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
             />
+        <activity android:name=".TouchTransfer.Activities.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".TouchTransfer.Activities.ReadingWritingActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
 
         <!-- System Services -->
         <service

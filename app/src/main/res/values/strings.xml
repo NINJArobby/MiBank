@@ -87,4 +87,11 @@
         <item>GLO_GH</item>
 
     </string-array>
+
+    <string name="hint_message">Type a message to send</string>
+    <string name="title_activity_reading_writing">ReadingWritingActivity</string>
+    <string name="title_alert_dialog">What do you want to do with the tag?</string>
+    <string name="write_button_label">Write</string>
+    <string name="read_button_label">Read</string>
+    <string name="title">NFC P2P Communication</string>
 </resources>

@@ -25,7 +25,6 @@ import zenithbank.com.gh.mibank.Main.Classes.UserAccessClass;
 import zenithbank.com.gh.mibank.Main.System.MibankServiceEngine;
 import zenithbank.com.gh.mibank.Main.System.System_DBEngine;
 import zenithbank.com.gh.mibank.R;
-import zenithbank.com.gh.mibank.TouchTransfer.Activities.TouchTransHome;
 
 public class Start extends AppCompatActivity
 {
@@ -76,9 +75,9 @@ public class Start extends AppCompatActivity
                             alertDialog.setTitle("Processing...");
                             alertDialog.setMessage("Processing...");
                             alertDialog.setCanceledOnTouchOutside(false);
-                            alertDialog.show();
-                            //new doLoginIfFirstTime().execute();
-                            startActivity(new Intent(getApplicationContext(), TouchTransHome.class));
+                            //alertDialog.show();
+                            new doLoginIfFirstTime().execute();
+                            //startActivity(new Intent(getApplicationContext(), ReadingWritingActivity.class));
 
                         } catch (Exception ex)
                         {
@@ -98,8 +97,8 @@ public class Start extends AppCompatActivity
                 }
                 else
                 {
-                    startActivity(new Intent(getApplicationContext(), TouchTransHome.class));
-                    //startActivity(new Intent(getApplicationContext(), IbankHome.class));
+                    //startActivity(new Intent(getApplicationContext(), ReadingWritingActivity.class));
+                    startActivity(new Intent(getApplicationContext(), MainHUb2.class));
                     Start.this.finish();
                 }
             }

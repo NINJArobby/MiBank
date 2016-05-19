@@ -53,7 +53,7 @@ public class Navigation_DrawerFragment extends Fragment
             list.add("Notifications");
             list.add("iBank mini");
             list.add("Mobile TopUps");
-            list.add("Touch Trans");
+            list.add("Z-Investment");
             list.add("Bill Payment");
             //
             //list.add("Card Requests");
