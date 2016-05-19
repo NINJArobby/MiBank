@@ -75,7 +75,7 @@ public class Start extends AppCompatActivity
                             alertDialog.setTitle("Processing...");
                             alertDialog.setMessage("Processing...");
                             alertDialog.setCanceledOnTouchOutside(false);
-                            //alertDialog.show();
+                            alertDialog.show();
                             new doLoginIfFirstTime().execute();
                             //startActivity(new Intent(getApplicationContext(), ReadingWritingActivity.class));
 
