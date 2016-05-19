@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:card_view="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/red4"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".7"
+                android:orientation="horizontal"
+                >
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    card_view:cardBackgroundColor="#ffffff"
+                    card_view:cardCornerRadius="2dp"
+                    card_view:cardElevation="6dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        >
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".8"
+                            android:orientation="horizontal"
+                            >
+
+                            <ProgressBar
+                                android:id="@+id/proileProgress"
+                                android:layout_width="50dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/colorPrimaryDark"
+                                />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".8"
+                                android:background="@color/colorPrimaryDark"
+                                android:gravity="bottom"
+                                android:text="Profile"
+                                android:textAlignment="viewEnd"
+                                android:textColor="@android:color/background_light"
+                                android:textSize="17dp"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".2"
+                            >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".3"
+                                android:orientation="vertical"
+                                >
+
+                                <TextView
+                                    android:id="@+id/txtname"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="@android:drawable/editbox_background_normal"
+                                    android:gravity="bottom"
+                                    android:text="Name Here"
+                                    android:textColor="@color/ColorPrimary"
+                                    android:textSize="15dp"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/txtphone"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="@android:drawable/editbox_background_normal"
+                                    android:gravity="bottom"
+                                    android:text="phone Here"
+                                    android:textColor="@color/ColorPrimary"
+                                    android:textSize="15dp"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/txtemail"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="@android:drawable/editbox_background_normal"
+                                    android:gravity="bottom"
+                                    android:text="mail Here5"
+                                    android:textColor="@color/ColorPrimary"
+                                    android:textSize="15dp"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/txtRsmName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="@android:drawable/editbox_background_normal"
+                                    android:gravity="bottom"
+                                    android:text="RSM here "
+                                    android:textColor="@color/ColorPrimary"
+                                    android:textSize="15dp"
+                                    />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".3"
+                >
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    card_view:cardBackgroundColor="#ffffff"
+                    card_view:cardCornerRadius="2dp"
+                    card_view:cardElevation="6dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".9"
+                            android:orientation="horizontal"
+                            >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".8"
+                                android:background="@color/colorPrimaryDark"
+                                android:gravity="bottom"
+                                android:text="Balances"
+                                android:textAlignment="viewEnd"
+                                android:textColor="@android:color/background_light"
+                                android:textSize="17dp"
+                                />
+                        </LinearLayout>
+
+                        <ListView
+                            android:id="@+id/balanceList"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".1"
+                            android:choiceMode="none"
+                            android:divider="@android:color/darker_gray"
+                            android:dividerHeight="1dp"
+                            />
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

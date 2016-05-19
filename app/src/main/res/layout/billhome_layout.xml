@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    android:id="@+id/drawer_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/ColorPrimary"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".9"
+                android:background="@color/ColorPrimary"
+                android:gravity="bottom"
+                android:text="CURRENT BILLS"
+                android:textColor="@android:color/background_light"
+                android:textSize="20dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".1"
+                android:orientation="vertical"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".9"
+                    android:orientation="horizontal"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".6"
+                        android:gravity="center"
+                        android:text="Select Account"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="17dp"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".4"
+                        android:background="@android:drawable/editbox_background_normal"
+                        >
+
+                        <Spinner
+                            android:id="@+id/FromAcctSpinner"
+                            style="@style/SpinnerAppTheme"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="1dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:dropDownSelector="@android:color/holo_blue_light"
+                            android:spinnerMode="dropdown"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <com.baoyz.swipemenulistview.SwipeMenuListView
+                    android:id="@+id/lsBIlls"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="1dp"
+                    android:layout_weight=".1"
+                    android:background="@color/colorPrimaryDark"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/addfab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="3dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/ic_plus"
+            fab:fab_colorNormal="@color/colorPrimary"
+            fab:fab_colorPressed="@color/Blue"
+            fab:fab_colorRipple="@color/colorPrimaryDark"
+            />
+
+    </FrameLayout>
+
+
+    <fragment
+        android:id="@+id/fragment_navigation_drawer"
+        class="zenithbank.com.gh.mibank.Main.Fragments.Navigation_DrawerFragment"
+        android:layout_width="@dimen/nav_drawer_width"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:layout="@layout/fragment_navigation_drawer"
+        tools:layout="@layout/fragment_navigation_drawer"
+        />
+</android.support.v4.widget.DrawerLayout>

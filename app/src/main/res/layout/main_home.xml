@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    android:id="@+id/drawer_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        >
+
+        <include
+            android:id="@+id/main_appBar"
+            layout="@layout/app_bar"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2dp"
+            android:showDividers="middle"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="0.5dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/background_light"
+                    >
+
+                    <fragment
+                        android:id="@+id/fragExchsnge"
+                        android:name="zenithbank.com.gh.mibank.Main.Fragments.RatesFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:layout="@layout/fragment_rates"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="0.5dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/background_light"
+                    >
+
+                    <fragment
+                        android:id="@+id/fragInterest"
+                        android:name="zenithbank.com.gh.mibank.Main.Fragments.InterestRatesFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:layout="@layout/fragment_interest_rates"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="0.5dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/background_light"
+                    >
+
+                    <fragment
+                        android:id="@+id/fraBalance"
+                        android:name="zenithbank.com.gh.mibank.Main.Fragments.BalancesFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:layout="@layout/fragment_balances"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="0.5dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/background_light"
+                    >
+
+                    <fragment
+                        android:id="@+id/fragHistory"
+                        android:name="zenithbank.com.gh.mibank.Main.Fragments.RecentHistoryFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:layout="@layout/fragment_recent_history"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <fragment
+        android:id="@+id/fragment_navigation_drawer"
+        class="zenithbank.com.gh.mibank.Main.Fragments.Navigation_DrawerFragment"
+        android:layout_width="@dimen/nav_drawer_width"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:layout="@layout/fragment_navigation_drawer"
+        tools:layout="@layout/fragment_navigation_drawer"
+        />
+</android.support.v4.widget.DrawerLayout>

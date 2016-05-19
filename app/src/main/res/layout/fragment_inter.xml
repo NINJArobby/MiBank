@@ -1,0 +1,289 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:fab="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              tools:context=".Ibank.Fragments.IntraFrag"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/primary"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".4"
+            android:gravity="center"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_share_variant_white_18dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|left"
+                android:text="Inter Account Transfer"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_weight=".1"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".6"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="From Account"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".4"
+                    android:background="@android:drawable/editbox_background_normal"
+                    >
+
+                    <Spinner
+                        android:id="@+id/SpnFromAccts"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:spinnerMode="dropdown"
+
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".8"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="To "
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".2"
+
+                    android:orientation="horizontal"
+                    >
+
+                    <EditText
+                        android:id="@+id/EdtxToAcct"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".4"
+                        android:background="@android:drawable/editbox_background_normal"
+                        android:inputType="number"
+                        />
+
+                    <TextView
+                        android:id="@+id/txtValidate"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".6"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text=" Verify "
+                        android:textColor="#ffffff"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".6"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="Amount"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".4"
+                    android:background="@android:drawable/editbox_background_normal"
+                    >
+
+                    <EditText
+                        android:id="@+id/EdtxAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="number"
+
+                        android:spinnerMode="dropdown"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                >
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".4"
+                    android:background="@android:drawable/editbox_background_normal"
+                    >
+
+                    <EditText
+                        android:id="@+id/EdtxtDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Description"
+                        android:spinnerMode="dropdown"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".6"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="Token"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".4"
+                    android:background="@android:drawable/editbox_background_normal"
+                    >
+
+                    <EditText
+                        android:id="@+id/EdtxtToken"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:spinnerMode="dropdown"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+
+                android:background="@color/primary"
+                >
+
+                <Button
+                    android:id="@+id/fabTokenRequest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="bottom|start"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@android:color/holo_blue_light"
+                    android:text="Request Token"
+                    android:textColor="#ffffff"
+                    />
+
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/Transfab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|right"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginRight="8dp"
+                    android:src="@drawable/ic_check"
+                    fab:fab_colorNormal="@android:color/holo_blue_light"
+                    fab:fab_colorPressed="@color/colorPrimaryDark"
+                    fab:fab_colorRipple="@color/colorPrimary"
+                    />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".4"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Transfer To Other Zenith Accounts"
+                android:textColor="#ffffff"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

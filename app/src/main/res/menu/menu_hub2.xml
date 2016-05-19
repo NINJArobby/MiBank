@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="zenithbank.com.gh.mibank.Main.Activities.Hub2"
+    >
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="Menu"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/action_config"
+        android:orderInCategory="100"
+        android:title="Settings"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/action_about"
+        android:orderInCategory="100"
+        android:title="Update Check"
+        app:showAsAction="never"
+        />
+</menu>

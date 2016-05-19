@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    package="zenithbank.com.gh.mibank"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <!-- Permissions -->
+    <uses-permission
+        android:name="android.permission.INTERNET"/>
+    <uses-permission
+        android:name="android.permission.WAKE_LOCK"/>
+    <!-- Required on api < 21 if you are using setRequiredNetworkType(int) -->
+    <uses-permission
+        android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!-- Required on all api levels if you are using setPersisted(true) -->
+    <uses-permission
+        android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission
+        android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission
+        android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission
+        android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission
+        android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission
+        android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission
+        android:name="android.permission.READ_SMS"/>
+    <uses-permission
+        android:name="android.permission.SEND_SMS"/>
+    <uses-permission
+        android:name="android.permission.NFC"/>
+
+    <uses-sdk
+        tools:overrideLibrary="com.sergiocasero.revealfab"/>
+
+    <permission
+        android:name="gh.com.zenith.mibank.permission.C2D_MESSAGE"
+        android:protectionLevel="signature"
+        />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo3"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        >
+
+        <!-- Activities -->
+        <activity
+            android:name=".Main.Activities.Start"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Notification.Main.NotifyHome"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            />
+        <activity
+            android:name=".Main.Activities.MainHub"
+            android:label="Main"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".Main.Activities.MainHUb2"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+            />
+        <activity
+            android:name=".Notification.Main.ReceiveActivity"
+            android:icon="@drawable/logo3"
+            android:label="Account Activity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.DeviceDefault.Dialog.MinWidth"
+            />
+        <activity
+            android:name=".Main.Activities.ActivationClass"
+            android:label="Settings"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".Ibank.Activities.IbankHome"
+            android:label="ibank mini"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+            android:windowSoftInputMode="adjustPan"
+            />
+        <activity
+            android:name=".Ibank.Activities.TransferModule"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.DeviceDefault.Dialog.MinWidth"
+            />
+        <activity
+            android:name=".Adverts.AudioAdvert"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.DeviceDefault.Dialog.MinWidth"
+            />
+        <activity
+            android:name=".Adverts.TextAdvert"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.DeviceDefault.Dialog.MinWidth"
+            />
+        <activity
+            android:name=".Adverts.VideoAdvert"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.DeviceDefault.Dialog.MinWidth"
+            />
+        <activity
+            android:name=".Ibank.Activities.AddBeneficiary"
+            android:label="Add Beneficiary"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".Notification.Main.Token"/>
+        <activity
+            android:name=".TopUps.T_Main.TopupsHome"
+            android:label="Airtime Top Up"
+            />
+        <activity
+            android:name=".TouchTransfer.Activities.TouchTransHome"
+            >
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/plain"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".TouchTransfer.Activities.TouchTransReceive">
+
+        </activity>
+        <activity
+            android:name=".Bill_Payment.Activities.BillPayHome"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+            />
+
+        <!-- System Services -->
+        <service
+            android:name=".Main.System.MiBankRatesUpdater"
+            android:exported="false"
+            />
+        <service
+            android:name=".Main.System.MiBankBalanceUpdater"
+            android:exported="false"
+            />
+        <service
+            android:name=".Main.System.MiBankInvestmentRatesUpdater"
+            android:exported="false"
+            />
+        <service
+            android:name=".Main.System.MiBankHistoryUpdater"
+            android:exported="false"
+            />
+        <service
+            android:name=".Main.System.Fetchers"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            />
+        <service
+            android:name=".Main.System.MiBankDeviceRegister"
+            android:exported="false"
+            />
+        <service
+            android:name=".Notification.System.N_SearchUpdater"
+            android:exported="false"
+            />
+        <service
+            android:name=".Ibank.System.BenefListIntentService"/>
+        <service
+            android:name=".Notification.System.GcmIntentService"/>
+        <service
+            android:name=".Adverts.DownloadService"
+            android:exported="false"
+            >
+        </service>
+        <service
+            android:name=".Ibank.System.I_TransferProductUpdater"/>
+
+        <!-- RECEIVERS -->
+        <receiver
+            android:name=".Notification.System.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND"
+            >
+            <intent-filter>
+
+                <!-- Receives the actual messages. -->
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+
+                <category android:name="gh.com.zenith.ZPROMPT"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".Ibank.System.SMSListener"
+            android:permission="android.permission.BROADCAST_SMS"
+            >
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"
+            />
+
+
+    </application>
+
+</manifest>

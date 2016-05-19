@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:card_view="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/White"
+              android:gravity="left"
+              android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                style="@style/EditTextAppTheme"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".7"
+                android:gravity="left|center"
+                android:text="Date :"
+                android:textColor="@color/zenithred"
+                android:textSize="15dp"
+                />
+
+            <TextView
+                android:id="@+id/txtDate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".3"
+                android:gravity="left|center"
+                android:text="Date"
+                android:textColor="@color/zenithred"
+                android:textSize="15dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+
+                style="@style/EditTextAppTheme"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".7"
+                android:gravity="left|center"
+                android:text="Account :"
+                android:textColor="@color/zenithred"
+                android:textSize="15dp"
+                />
+
+            <TextView
+                android:id="@+id/txtAcctNo"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".3"
+                android:gravity="left|center"
+                android:text="Account"
+                android:textColor="@color/zenithred"
+                android:textSize="15dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+
+                style="@style/EditTextAppTheme"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".7"
+                android:gravity="left|center"
+                android:text="Amount :"
+                android:textColor="@color/zenithred"
+                android:textSize="15dp"
+                />
+
+            <TextView
+                android:id="@+id/txtAmount"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".3"
+                android:gravity="left|center"
+                android:text="amount"
+                android:textColor="@color/zenithred"
+                android:textSize="15dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+
+                style="@style/EditTextAppTheme"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".7"
+                android:gravity="left|center"
+                android:text="Type :"
+                android:textColor="@color/zenithred"
+                android:textSize="15dp"
+                />
+
+            <TextView
+                android:id="@+id/txttp"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".3"
+                android:gravity="left|center"
+                android:text="type"
+                android:textColor="@color/zenithred"
+                android:textSize="15dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                style="@style/EditTextAppTheme"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".7"
+                android:gravity="left|center"
+                android:text="Desc :"
+                android:textColor="@color/zenithred"
+                android:textSize="15dp"
+                />
+
+            <TextView
+                android:id="@+id/txtDescription"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".3"
+                android:gravity="left|center"
+                android:text="Description"
+                android:textColor="@color/zenithred"
+                android:textSize="15dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+
+                style="@style/EditTextAppTheme"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".7"
+                android:gravity="left|center"
+                android:text="Currency :"
+                android:textColor="@color/zenithred"
+                android:textSize="15dp"
+                />
+
+            <TextView
+                android:id="@+id/txtcurrency"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".3"
+                android:gravity="left|center"
+                android:text="Currency"
+                android:textColor="@color/zenithred"
+                android:textSize="15dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+
+                style="@style/EditTextAppTheme"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".7"
+                android:gravity="left|center"
+                android:text="Branch :"
+                android:textColor="@color/zenithred"
+                android:textSize="15dp"
+                />
+
+            <TextView
+                android:id="@+id/txt_Branch"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".3"
+                android:gravity="left|center"
+                android:text="Brabnch"
+                android:textColor="@color/zenithred"
+                android:textSize="15dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+
+                style="@style/EditTextAppTheme"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".7"
+                android:gravity="left|center"
+                android:text="Balance :"
+                android:textColor="@color/zenithred"
+                android:textSize="15dp"
+                />
+
+            <TextView
+                android:id="@+id/txt_Balance"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".3"
+                android:gravity="left|center"
+                android:text="Brabnch"
+                android:textColor="@color/zenithred"
+                android:textSize="15dp"
+                />
+        </LinearLayout>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="6dp"
+            android:layout_weight="1"
+            card_view:cardBackgroundColor="#ffffff"
+            card_view:cardCornerRadius="2dp"
+            card_view:cardElevation="6dp"
+            >
+
+            <Button
+                android:id="@+id/Recdone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/zenithred"
+                android:text="Done"
+                android:textColor="#ffffff"
+                />
+
+        </android.support.v7.widget.CardView>
+
+
+    </LinearLayout>
+</LinearLayout>
