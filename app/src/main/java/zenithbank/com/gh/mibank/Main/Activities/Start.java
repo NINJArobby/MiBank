@@ -18,7 +18,6 @@ import com.github.javiersantos.materialstyleddialogs.MaterialStyledDialog;
 import com.google.gson.Gson;
 
 import dmax.dialog.SpotsDialog;
-import zenithbank.com.gh.mibank.Ibank.Activities.IbankHome;
 import zenithbank.com.gh.mibank.Ibank.System.IbankDatabaseEngine;
 import zenithbank.com.gh.mibank.Main.Classes.AuthenticateResponseClass;
 import zenithbank.com.gh.mibank.Main.Classes.SystemConfigurationClass;
@@ -99,8 +98,8 @@ public class Start extends AppCompatActivity
                 }
                 else
                 {
-                    //startActivity(new Intent(getApplicationContext(), TouchTransHome.class));
-                    startActivity(new Intent(getApplicationContext(), IbankHome.class));
+                    startActivity(new Intent(getApplicationContext(), TouchTransHome.class));
+                    //startActivity(new Intent(getApplicationContext(), IbankHome.class));
                     Start.this.finish();
                 }
             }

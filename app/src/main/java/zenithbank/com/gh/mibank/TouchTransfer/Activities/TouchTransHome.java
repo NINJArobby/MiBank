@@ -1,7 +1,6 @@
 package zenithbank.com.gh.mibank.TouchTransfer.Activities;
 
 import android.app.PendingIntent;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.nfc.NdefMessage;
@@ -10,7 +9,6 @@ import android.nfc.Tag;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -30,6 +28,7 @@ public class TouchTransHome extends ActionBarActivity
     //private final String _MIME_TYPE = "text/plain";
     private final String _MIME_TYPE = "application/vnd.zenithbank.com.gh.mibank";
     Button write_tag;
+    NdefMessage message;
     private NfcAdapter _nfcAdapter;
     private PendingIntent _pendingIntent;
     private IntentFilter[] _readIntentFilters;
@@ -51,6 +50,7 @@ public class TouchTransHome extends ActionBarActivity
                 _enableNdefExchangeMode();
             }
         });
+        _init();
     }
 
     //initialize adapter and check for availability
@@ -104,50 +104,21 @@ public class TouchTransHome extends ActionBarActivity
         _nfcAdapter.enableForegroundDispatch(this, _pendingIntent, _writeIntentFilters, null);
     }
 
-    @Override
-    protected void onNewIntent(Intent intent)
-    {
-        super.onNewIntent(intent);
-
-        _intent = intent;
-
-        if (NfcAdapter.ACTION_NDEF_DISCOVERED.equals(intent.getAction()))
-        {
-            _readMessage();
-        }
-
-        if (NfcAdapter.ACTION_TAG_DISCOVERED.equals(intent.getAction()))
-        {
-            AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setMessage("Action")
-                    .setPositiveButton("ok",
-                            new DialogInterface.OnClickListener()
-                            {
-                                public void onClick(DialogInterface dialog, int id)
-                                {
-                                    _writeMessage();
-                                }
-                            })
-                    .setNegativeButton("cancel",
-                            new DialogInterface.OnClickListener()
-                            {
-                                public void onClick(DialogInterface dialog, int id)
-                                {
-                                    _readMessage();
-                                }
-                            });
-
-            AlertDialog dialog = builder.create();
-            dialog.show();
-        }
-    }
-
     private NdefMessage _getNdefMessage()
     {
-        EditText messageTextField = (EditText) findViewById(R.id.message_text_field);
-        String stringMessage = " " + messageTextField.getText().toString();
+        String stringMessage;
 
-        NdefMessage message = NFCUtils.getNewMessage(_MIME_TYPE, stringMessage.getBytes());
+        try
+        {
+            EditText messageTextField = (EditText) findViewById(R.id.message_text_field);
+            stringMessage = " " + messageTextField.getText().toString();
+
+            message = NFCUtils.getNewMessage(_MIME_TYPE, stringMessage.getBytes());
+        } catch (Exception ex)
+        {
+            ex.getMessage();
+        }
+
 
         return message;
     }

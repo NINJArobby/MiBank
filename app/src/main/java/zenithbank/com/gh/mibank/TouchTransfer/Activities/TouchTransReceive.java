@@ -2,11 +2,13 @@ package zenithbank.com.gh.mibank.TouchTransfer.Activities;
 
 import android.app.Activity;
 import android.app.PendingIntent;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.nfc.NfcAdapter;
 import android.os.Bundle;
-import android.widget.TextView;
+import android.support.v7.app.AlertDialog;
+import android.widget.Toast;
 
 import zenithbank.com.gh.mibank.R;
 
@@ -19,14 +21,7 @@ public class TouchTransReceive extends Activity
     PendingIntent mNfcPendingIntent;
     IntentFilter[] mWriteTagFilters;
     IntentFilter[] mNdefExchangeFilters;
-    private boolean mResumed = false;
-    private boolean mWriteMode = false;
-    private NfcAdapter mAdapter;
-    private PendingIntent mPendingIntent;
-    private IntentFilter[] mFilters;
-    private String[][] mTechLists;
-    private TextView mText;
-    private int mCount = 0;
+    private Intent _intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -49,6 +44,44 @@ public class TouchTransReceive extends Activity
         }
         mNdefExchangeFilters = new IntentFilter[]{ndefDetected};
 
+        Toast.makeText(this, "Complete", Toast.LENGTH_LONG).show();
     }
 
+    @Override
+    protected void onNewIntent(Intent intent)
+    {
+        super.onNewIntent(intent);
+
+        _intent = intent;
+
+        if (NfcAdapter.ACTION_NDEF_DISCOVERED.equals(intent.getAction()))
+        {
+
+        }
+
+        if (NfcAdapter.ACTION_TAG_DISCOVERED.equals(intent.getAction()))
+        {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setMessage("Action")
+                    .setPositiveButton("ok",
+                            new DialogInterface.OnClickListener()
+                            {
+                                public void onClick(DialogInterface dialog, int id)
+                                {
+
+                                }
+                            })
+                    .setNegativeButton("cancel",
+                            new DialogInterface.OnClickListener()
+                            {
+                                public void onClick(DialogInterface dialog, int id)
+                                {
+
+                                }
+                            });
+
+            AlertDialog dialog = builder.create();
+            dialog.show();
+        }
+    }
 }
