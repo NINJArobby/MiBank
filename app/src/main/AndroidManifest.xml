@@ -131,15 +131,15 @@
         <activity
             android:name=".TouchTransfer.Activities.TouchTransHome"
             >
+
+        </activity>
+        <activity
+            android:name=".TouchTransfer.Activities.TouchTransReceive">
             <intent-filter>
                 <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <data android:mimeType="text/plain"/>
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".TouchTransfer.Activities.TouchTransReceive">
-
         </activity>
         <activity
             android:name=".Bill_Payment.Activities.BillPayHome"

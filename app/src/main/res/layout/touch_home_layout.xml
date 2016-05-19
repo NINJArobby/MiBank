@@ -20,7 +20,7 @@
     </LinearLayout>
 
     <EditText
-        android:id="@+id/note"
+        android:id="@+id/message_text_field"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:gravity="top"
